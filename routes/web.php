@@ -78,7 +78,7 @@ Route::group(['middleware' => ['auth','verified']], function () {
 Route::get('/dashboard', [BookController::class, 'index'])->name('buku');
 Route::get('/tambahBook', [BookController::class, 'tambahBook'])->name('tambahBook');
 Route::post('/insertdata', [BookController::class, 'insertdata'])->name('insertdata');
-Route::get('/tampildatabook/{id}', [BookController::class, 'tampildatabook'])->name('tampildatabook');
+Route::get('/tampildatabuku/{id}', [BookController::class, 'tampildatabuku'])->name('tampildatabuku');
 Route::post('/updatedata/{id}', [BookController::class, 'updatedata'])->name('updatedata');
 Route::get('/deletedata/{id}', [BookController::class, 'deletedata'])->name('deletedata');
 

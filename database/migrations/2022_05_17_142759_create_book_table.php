@@ -15,6 +15,11 @@ class CreateBookTable extends Migration
     {
         Schema::create('book', function (Blueprint $table) {
             $table->id();
+            $table->string('kode_buku');
+            $table->string('judul_buku');
+            $table->string('pengarang');
+            $table->string('penerbit');
+            $table->string('tahun_terbit');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ class CreateBookTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('book');
+        Schema::dropIfExists('books');
     }
 }
