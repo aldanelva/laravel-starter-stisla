@@ -14,7 +14,7 @@
         <div class="section-body">
             <h2 class="section-title">Tambah User</h2>
 
-            <div class="card">
+            <div class="card"> 
                 <div class="card-header">
                     <h4>Validasi Tambah Data</h4>
                 </div>

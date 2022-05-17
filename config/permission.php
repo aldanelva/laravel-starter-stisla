@@ -45,7 +45,7 @@ return [
          */
 
         'permissions' => 'permissions',
-
+        
         /*
          * When using the "HasPermissions" trait from this package, we need to know which
          * table should be used to retrieve your models permissions. We have chosen a
