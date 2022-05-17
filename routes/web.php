@@ -1,5 +1,6 @@
 <?php
 
+
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\Menu\MenuGroupController;
 use App\Http\Controllers\Menu\MenuItemController;
@@ -13,7 +14,9 @@ use App\Http\Controllers\RoleAndPermission\PermissionController;
 use App\Http\Controllers\RoleAndPermission\RoleController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
+use App\Models\Book;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BookController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -71,4 +74,13 @@ Route::group(['middleware' => ['auth','verified']], function () {
         Route::get('assing-user/{user}/edit', [AssignUserToRoleController::class, 'edit'])->name('assign.user.edit');
         Route::put('assign-user/{user}', [AssignUserToRoleController::class, 'update'])->name('assign.user.update');
     });
+
+Route::get('/dashboard', [BookController::class, 'index'])->name('buku');
+Route::get('/tambahBook', [BookController::class, 'tambahBook'])->name('tambahBook');
+Route::post('/insertdata', [BookController::class, 'insertdata'])->name('insertdata');
+Route::get('/tampildatabook/{id}', [BookController::class, 'tampildatabook'])->name('tampildatabook');
+Route::post('/updatedata/{id}', [BookController::class, 'updatedata'])->name('updatedata');
+Route::get('/deletedata/{id}', [BookController::class, 'deletedata'])->name('deletedata');
+
+
 });
